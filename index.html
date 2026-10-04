@@ -7,30 +7,28 @@
 
     <title>Constancia Domiciliaria | Iniciar sesión</title>
 
-    <link rel="stylesheet" href="./css/style.css">
-
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
     <main class="login-container">
 
-        <section class="login-card">
+        <section class="login-card" aria-labelledby="titulo">
 
             <!-- Logo -->
             <div class="logo">
 
-                <div class="logo-icon">
+                <div class="logo-icon" aria-hidden="true">
                     🏠
                 </div>
 
-                <h1>
+                <h1 id="titulo">
                     Constancia
                     <span>Domiciliaria</span>
                 </h1>
 
             </div>
-
 
             <!-- Bienvenida -->
             <p class="welcome">
@@ -41,9 +39,8 @@
                 Ingresa tus datos para acceder al módulo de solicitud.
             </p>
 
-
             <!-- Formulario -->
-            <form id="loginForm">
+            <form id="loginForm" action="#" method="post">
 
                 <div class="input-group">
 
@@ -56,11 +53,11 @@
                         id="usuario"
                         name="usuario"
                         placeholder="Ingresa tu usuario"
+                        autocomplete="username"
                         required
                     >
 
                 </div>
-
 
                 <div class="input-group">
 
@@ -73,11 +70,11 @@
                         id="password"
                         name="password"
                         placeholder="Ingresa tu contraseña"
+                        autocomplete="current-password"
                         required
                     >
 
                 </div>
-
 
                 <!-- Opciones -->
                 <div class="options">
@@ -87,19 +84,18 @@
                         <input
                             type="checkbox"
                             id="recordarme"
+                            name="recordarme"
                         >
 
-                        Recordarme
+                        <span>Recordarme</span>
 
                     </label>
-
 
                     <a href="#" id="recuperar">
                         ¿Olvidaste tu contraseña?
                     </a>
 
                 </div>
-
 
                 <!-- Botón -->
                 <button type="submit">
@@ -108,33 +104,29 @@
 
             </form>
 
-
             <!-- Registro -->
             <div class="divider">
                 <span>o</span>
             </div>
 
             <p class="register">
-
                 ¿No tienes una cuenta?
 
                 <a href="#" id="crearCuenta">
                     Crear cuenta
                 </a>
-
             </p>
 
         </section>
-
 
         <!-- Pie de página -->
         <footer>
             © 2026 Melany Sarahi Hernández Bajonero
         </footer>
 
-        </main>
+    </main>
 
-    <script src="js/script.js"></script>
+    <script src="./js/script.js"></script>
 
 </body>
 
